@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mailacodes | Software Engineering Portfolio</title>
 
+    <meta name="description" content="Maila Shaqelli - Software Engineering Student at Epoka University. Academic and development portfolio.">
+    <meta name="keywords" content="Maila Shaqelli, mailacodes, Software Engineering, Epoka University">
+    <meta name="author" content="Maila Shaqelli">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,15 +17,12 @@
         :root {
             --bg: #0b0f17;
             --card-bg: rgba(22, 27, 34, 0.7);
-            --card-hover: rgba(30, 38, 50, 0.85);
             --text-main: #e6edf3;
             --text-muted: #8b949e;
             --accent: #58a6ff;
-            --accent-glow: rgba(88, 166, 255, 0.25);
             --pink-accent: #f778ba;
-            --pink-glow: rgba(247, 120, 186, 0.2);
+            --pink-glow: rgba(247, 120, 186, 0.15);
             --border: #30363d;
-            --border-hover: #8b949e;
         }
 
         * {
@@ -40,8 +41,8 @@
             display: flex;
             justify-content: center;
             background-image: 
-                radial-gradient(circle at 15% 15%, rgba(88, 166, 255, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 85% 85%, rgba(247, 120, 186, 0.06) 0%, transparent 40%);
+                radial-gradient(circle at 15% 15%, rgba(88, 166, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(247, 120, 186, 0.05) 0%, transparent 40%);
             background-attachment: fixed;
         }
 
@@ -60,7 +61,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(88, 166, 255, 0.1);
+            background: rgba(88, 166, 255, 0.08);
             border: 1px solid rgba(88, 166, 255, 0.2);
             color: var(--accent);
             font-family: 'Fira Code', monospace;
@@ -103,19 +104,19 @@
         }
 
         .section-title {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 600;
             color: #ffffff;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-family: 'Fira Code', monospace;
         }
 
         .section-title::before {
             content: "//";
             color: var(--pink-accent);
-            font-family: 'Fira Code', monospace;
         }
 
         .folder-card {
@@ -125,42 +126,27 @@
             padding: 28px;
             backdrop-filter: blur(10px);
             transition: all 0.25s ease;
-            position: relative;
-            overflow: hidden;
         }
 
         .folder-card:hover {
             border-color: var(--pink-accent);
             box-shadow: 0 8px 30px var(--pink-glow);
-            transform: translateY(-2px);
         }
 
         .folder-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
             margin-bottom: 16px;
         }
 
-        .folder-title-group {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .folder-icon {
-            font-size: 1.8rem;
-        }
-
         .folder-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: #ffffff;
             font-weight: 600;
+            font-family: 'Fira Code', monospace;
         }
 
         .folder-desc {
             color: var(--text-muted);
-            font-size: 0.98rem;
+            font-size: 0.95rem;
             margin-bottom: 24px;
         }
 
@@ -175,27 +161,30 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border);
-            padding: 12px 16px;
+            padding: 14px 18px;
             border-radius: 8px;
             color: var(--text-main);
             text-decoration: none;
             font-size: 0.92rem;
             font-weight: 500;
             transition: all 0.2s ease;
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
+            font-family: 'Fira Code', monospace;
         }
 
         .subject-link:hover {
             background: rgba(88, 166, 255, 0.08);
             border-color: var(--accent);
             color: #ffffff;
-            transform: translateX(3px);
+            transform: translateY(-2px);
         }
 
         .arrow {
             color: var(--accent);
-            font-family: 'Fira Code', monospace;
             transition: transform 0.2s ease;
         }
 
@@ -212,7 +201,7 @@
         }
 
         .upcoming-card h3 {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #ffffff;
             margin-bottom: 8px;
             font-weight: 500;
@@ -227,7 +216,7 @@
         .tag {
             font-family: 'Fira Code', monospace;
             font-size: 0.75rem;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border);
             padding: 3px 10px;
             border-radius: 4px;
@@ -276,34 +265,29 @@
 
         <main>
             <section>
-                <h2 class="section-title">High School Showcases</h2>
+                <h2 class="section-title">Academic Archives</h2>
                 
                 <div class="folder-card">
                     <div class="folder-header">
-                        <div class="folder-title-group">
-                            <span class="folder-icon"></span>
-                            <div>
-                                <h3>viti-pare /</h3>
-                                <p style="font-size: 0.85rem; color: var(--text-muted); font-family: 'Fira Code', monospace;">Integrated Science & Tech Showcase (2024)</p>
-                            </div>
-                        </div>
+                        <h3>viti-pare /</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); font-family: 'Fira Code', monospace;">Integrated Science & Technology Showcase (2024)</p>
                     </div>
 
-                    <p class="folder-desc">Projekt i integruar ueb me 3 modulat kryesore shkencore. Zgjidh lëndën më poshtë për të eksploruar faqet:</p>
+                    <p class="folder-desc">Projekt i integruar ueb me 3 modulat kryesore shkencore. Zgjidh lëndën për të eksploruar skedarët:</p>
 
                     <div class="subjects-grid">
                         <a href="viti-pare/fizika.html" class="subject-link">
-                            <span>01. Fizika</span>
+                            <span>01. fizika.html</span>
                             <span class="arrow">&rarr;</span>
                         </a>
 
                         <a href="viti-pare/biologjia.html" class="subject-link">
-                            <span> 02. Biologjia</span>
+                            <span>02. biologjia.html</span>
                             <span class="arrow">&rarr;</span>
                         </a>
 
                         <a href="viti-pare/tik.html" class="subject-link">
-                            <span> 03. TIK & Robotika</span>
+                            <span>03. tik.html</span>
                             <span class="arrow">&rarr;</span>
                         </a>
                     </div>
@@ -311,7 +295,7 @@
             </section>
 
             <section>
-                <h2 class="section-title">Software Engineering Engines</h2>
+                <h2 class="section-title">Engineering Core</h2>
                 
                 <div class="upcoming-card">
                     <h3>University Core Applications</h3>
@@ -326,31 +310,24 @@
         </main>
 
         <footer>
-            <span>&copy; 2026 mailacodes</span>
-            <span>Hosted on <a href="https://github.com/mailacodes" target="_blank">GitHub Pages</a></span>
-        </footer>
-    </div>
-
-    <footer>
             <span>&copy; 2026 mailacodes. All rights reserved.</span>
             <span>Hosted on <a href="https://github.com/mailacodes" target="_blank">GitHub Pages</a></span>
         </footer>
     </div>
 
     <script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
 
         document.addEventListener('keydown', function(e) {
             if (e.key === "PrintScreen" || 
-               (e.ctrlKey && e.shiftKey && e.key === "I") || 
-               (e.ctrlKey && e.key === "u")) {
+               (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i" || e.key === "J" || e.key === "j")) || 
+               (e.ctrlKey && (e.key === "u" || e.key === "U"))) {
                 e.preventDefault();
             }
         });
     </script>
-</body>
-</html>
-
 </body>
 </html>
 
