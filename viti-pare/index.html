@@ -3,178 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viti i Parë | Projektet</title>
+    <title>Mrekullitë e Fizikës | Projekt Fitues 2024</title>
     <style>
         :root {
-            --bg-color: #0d1117;
+            --bg: #0d1117;
             --card-bg: #161b22;
-            --text-main: #c9d1d9;
+            --text: #c9d1d9;
             --text-muted: #8b949e;
             --accent: #58a6ff;
-            --border-color: #30363d;
+            --border: #30363d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
             padding: 40px 20px;
-            line-height: 1.6;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+            display: flex;
+            justify-content: center;
         }
 
         .container {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 750px;
+            width: 100%;
         }
 
         .back-link {
+            display: inline-block;
             color: var(--accent);
             text-decoration: none;
-            font-size: 0.95rem;
-            display: inline-block;
-            margin-bottom: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
         }
 
-        h1 {
-            color: #fff;
-            font-size: 2.2rem;
-            margin: 0 0 10px 0;
+        .back-link:hover {
+            text-decoration: underline;
         }
 
-        .folder-desc {
-            color: var(--text-muted);
+        header {
             margin-bottom: 40px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border);
             padding-bottom: 20px;
         }
 
-        .project-section {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 35px;
-        }
-
-        .project-section h2 {
-            color: #fff;
-            margin-top: 0;
-            font-size: 1.6rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-        }
-
-        .project-section h3 {
+        .badge {
+            display: inline-block;
+            background-color: rgba(88, 166, 255, 0.15);
             color: var(--accent);
-            font-size: 1.2rem;
-            margin-top: 25px;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            font-weight: 500;
         }
 
-        p, ul {
-            color: var(--text-main);
-            font-size: 1rem;
+        h1 {
+            font-size: 2rem;
+            color: #ffffff;
+            font-weight: 600;
+            line-height: 1.3;
         }
 
-        li {
-            margin-bottom: 10px;
+        article {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        article img {
+            width: 100%;
+            height: auto;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border);
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
         footer {
+            margin-top: 40px;
             text-align: center;
-            margin-top: 60px;
-            color: var(--text-muted);
             font-size: 0.85rem;
-            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
             padding-top: 20px;
         }
 
-        @media print {
-            body { display: none !important; }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <a href="../" class="back-link">← Kthehu te faqja kryesore</a>
-        <h1>📂 Folderi: Projektet e Vitit të Parë</h1>
-        <p class="folder-desc">Këtu ndodhen të treja punimet e mia kërkimore të detajuara pa asnjë ndryshim të tekstit.</p>
+        <a href="../" class="back-link">&larr; Kthehu te Portofoli</a>
 
-        <!-- 1. TIK / ROBOTIKA -->
-        <div class="project-section">
-            <h2>TIK: Robotika dhe Inteligjenca Artificiale</h2>
-            <p>Robotika dhe inteligjenca artificiale (IA) janë dy fusha që po përparojnë me shpejtësi dhe kanë një ndikim të madh në shumë aspekte të jetës sonë. Këto teknologji kanë potencialin të ndryshojnë rrënjësisht mënyrën se si punojmë, jetojmë dhe ndërveprojmë me botën rreth nesh.</p>
-            
-            <h3>1. Robotika</h3>
-            <p>Robotika është shkenca dhe teknologjia e krijimit, funksionimit dhe përdorimit të robotëve. Këtu janë disa nga fushat kryesore dhe aplikimet në robotikë:</p>
-            <ul>
-                <li><strong>Robotët Industrialë (Automatizimi i Prodhimit):</strong> Robotët përdoren gjerësisht në prodhimin industrial për të kryer detyra të përsëritura dhe të rrezikshme, duke përmirësuar efikasitetin dhe sigurinë në fabrika. Po ashtu kryejnë detyra precize si montimi dhe salduarja.</li>
-                <li><strong>Robotët në Shërbime (Kujdesi Shëndetësor):</strong> Robotët ndihmojnë në operacione kirurgjikale, rehabilitim dhe kujdes për të moshuarit. Ata mund të ofrojnë asistencë mjekësore dhe mbikëqyrje në shtëpi.</li>
-                <li><strong>Robotët për Kërkim dhe Shpëtim:</strong> Përdoren për të kërkuar dhe shpëtuar njerëz në situata emergjente, si pas tërmeteve ose përmbytjeve.</li>
-                <li><strong>Robotët Humanoidë (Asistentë Personalë):</strong> Mund të ofrojnë shërbime asistimi në shtëpi dhe zyra, duke ndihmuar me detyra të ndryshme të përditshme.</li>
-            </ul>
+        <header>
+            <span class="badge">🏆 Projekt Fitues 2024 • Viti I Gjimnaz</span>
+            <h1>Mrekullitë e Fizikës: Eksplorimi i botës rreth nesh</h1>
+        </header>
 
-            <h3>E ardhmja e Robotikës dhe IA</h3>
-            <p>Integrimi më i madh i IA dhe robotikës në përditshmëri pritet të bëhet më i zakonshëm. Robotët do të bëhen më të pavarur, më inteligjentë dhe të aftë të marrin vendime komplekse duke përdorur gjuhën natyrore dhe shenjat e trupit.</p>
-        </div>
+        <main>
+            <article>
+                <h2>1. Ligji i Gravitetit Universal</h2>
+                <img src="https://images.pexels.com/photos/355938/pexels-photo-355938.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Graviteti Universal">
+                <p>Puna novatore e Sir Isaac Newton në fizikë u botua për herë të parë në 1687 në librin e tij "Parimet Matematikore të Filozofisë Natyrore", i njohur zakonisht si "Principia". Në të, ai përshkroi teoritë rreth gravitetit dhe lëvizjes. Ligji i tij fizik i gravitetit thotë se një objekt tërheq një objekt tjetër në përpjesëtim të drejtë me masën e tyre të kombinuar dhe në lidhje të kundërt me katrorin e distancës ndërmjet tyre.</p>
+            </article>
 
-        <!-- 2. BIOLOGJIA -->
-        <div class="project-section">
-            <h2>Biologjia: Shkenca e Jetës</h2>
-            
-            <h3>1. Rëndësia e Biologjisë</h3>
-            <p>Biologjia ka një ndikim të madh në jetën e përditshme dhe shëndetin e njerëzve. Përparimet në biologji kanë çuar në zhvillimin e ilaçeve, terapive gjenetike, teknikave të reja të diagnostikimit dhe trajtimeve mjekësore. Gjithashtu luan rol kyç në bujqësi dhe menaxhimin e ekosistemeve.</p>
-            
-            <h3>2. Fakte Interesante për lëndën e Biologjisë</h3>
-            <ul>
-                <li><strong>ADN-ja e Njeriut:</strong> Nëse do të shtriheshin të gjitha molekulat e ADN-së në trupin e një njeriu të vetëm, ato do të shkonin rreth 10 miliardë milje (nga Toka deri te Plutoni dhe mbrapa).</li>
-                <li><strong>Bakteret dhe Trupi:</strong> Trupi i njeriut përmban rreth 37.2 trilion qeliza, por ka rreth 39 trilion baktere.</li>
-                <li><strong>Ritmi i Zemrës:</strong> Zemra e një balene blu është aq e madhe sa një fëmijë mund të notojë nëpër arteriet e saj, dhe rrahja dëgjohet deri në 3 kilometra larg.</li>
-                <li><strong>Fotosinteza:</strong> Pemët dhe bimët prodhojnë oksigjen si një nënprodukt të krijimit të ushqimit përmes energjisë së diellit.</li>
-            </ul>
+            <article>
+                <h2>2. Ruajtja e Masës dhe Energjisë</h2>
+                <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80" alt="Energjia">
+                <p>Albert Ajnshtajni prezantoi ekuacionin e tij të famshëm E = mc² në një parashtrim të ditarit të vitit 1905 me titull, "Mbi elektrodinamikën e trupave në lëvizje". Punimi prezantoi teorinë e tij të relativitetit special, bazuar në dy postulate:<br><br>
+                <strong>Parimi i Relativitetit:</strong> Ligjet e fizikës janë të njëjta për të gjitha kornizat e referencës inerciale.<br><br>
+                <strong>Parimi i qëndrueshmërisë së shpejtësisë së dritës:</strong> Drita përhapet gjithmonë përmes një vakuumi me një shpejtësi të caktuar, e cila është e pavarur nga gjendja e lëvizjes së trupit që lëshon.<br><br>
+                Parimi i parë thjesht thotë se ligjet e fizikës zbatohen në mënyrë të barabartë për të gjithë në të gjitha situatat. Parimi i dytë përcakton që shpejtësia e dritës në vakum është konstante.</p>
+            </article>
 
-            <h3>3. Tema të Njohura dhe të Vlerësuara</h3>
-            <p><strong>Teoria e Evolucionit nga Seleksionimi Natyror:</strong> Charles Darwin propozoi se speciet ndryshojnë me kohën ku individët me karakteristika më të mira mbijetojnë.</p>
-            <p><strong>Gjenetika dhe ADN-ja:</strong> James Watson dhe Francis Crick zbuluan strukturën e dyfishtë spirale të ADN-së.</p>
-            <p><strong>Biologjia Molekulare (Klonimi):</strong> Klonimi i deles Dolly në vitin 1996 tregoi se qelizat e rritura mund të reprogramohen.</p>
-        </div>
-
-        <!-- 3. FIZIKA -->
-        <div class="project-section">
-            <h2>Mrekullitë e Fizikës: Eksplorimi i botës rreth nesh</h2>
-            
-            <h3>1. Ligji i Gravitetit Universal</h3>
-            <p>I botuar nga Sir Isaac Newton në vitin 1687 në librin "Principia". Ligji i tij thotë se një objekt tërheq një objekt tjetër në përpjesëtim të drejtë me masën e tyre të kombinuar dhe në lidhje të kundërt me katrorin e distancës ndërmjet tyre.</p>
-            
-            <h3>2. Ruajtja e Masës dhe Energjisë</h3>
-            <p>Albert Ajnshtajni prezantoi ekuacionin E = mc² në vitin 1905 përmes teorisë së relativitetit special, bazuar në dy postulate:</p>
-            <ul>
-                <li><strong>Parimi i Relativitetit:</strong> Ligjet e fizikës janë të njëjta për të gjitha kornizat e referencës inerciale.</li>
-                <li><strong>Parimi i qëndrueshmërisë së shpejtësisë së dritës:</strong> Shpejtësia e dritës në vakum është gjithmonë konstante dhe nuk varet nga lëvizja e trupit që e lëshon.</li>
-            </ul>
-
-            <h3>3. Ligjet Elektrostatike</h3>
-            <p><strong>Ligji i Kulombit:</strong> Forca midis dy ngarkesave pika është drejtpërdrejt proporcionale me madhësinë e secilës ngarkesë dhe në përpjesëtim të zhdrejtë met katrorin e distancës së tyre. Ngarkesat e njëjta zmbrapsen, të kundërtat tërhiqen.</p>
-            <p><strong>Ligji i Gausit:</strong> Rrjedha neto e një fushe elektrike nëpër një sipërfaqe të mbyllur është proporcionale me ngarkesën elektrike të mbyllur brenda saj.</p>
-        </div>
+            <article>
+                <h2>3. Ligjet Elektrostatike</h2>
+                <img src="https://images.pexels.com/photos/414860/pexels-photo-414860.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Elektrostatika">
+                <p>Dy ligje të fizikës rregullojnë marrëdhënien midis grimcave të ngarkuara elektrike dhe aftësisë së tyre për të krijuar forcë elektrostatike dhe fusha elektrostatike.<br><br>
+                <strong>Ligji i Kulombit:</strong> Forca midis dy ngarkesave pika është drejtpërdrejt proporcionale me madhësinë e secilës ngarkesë dhe në përpjesëtim të zhdrejtë me katrorin e distancës midis qendrave të tyre.<br><br>
+                <strong>Ligji i Gausit:</strong> Ky ligj thotë se rrjedha neto e një fushe elektrike nëpër një sipërfaqe të mbyllur është proporcionale me ngarkesën elektrike të mbyllur.</p>
+            </article>
+        </main>
 
         <footer>
-            <p>© 2026 Maila. Çasja dhe përmbajtja e siguruar plotësisht.</p>
+            <p>&copy; 2024 Maila • Projekt i Integruar i Shkencave</p>
+            <p style="margin-top: 8px;"><a href="projekti shkencor2.html">Vazhdo te Faqja 2 &rarr;</a></p>
         </footer>
     </div>
 
-    <script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        document.addEventListener('keydown', function(e) {
-            if (e.key === "PrintScreen" || (e.ctrlKey && e.shiftKey && e.key === "I") || (e.ctrlKey && e.key === "u")) {
-                e.preventDefault();
-            }
-        });
-    </script>
 </body>
 </html>
-
