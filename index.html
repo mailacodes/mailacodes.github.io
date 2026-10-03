@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,6 +67,12 @@
             gap: 25px;
         }
 
+        .project-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         .project-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -76,6 +82,8 @@
             flex-direction: column;
             justify-content: space-between;
             transition: transform 0.2s, border-color 0.2s;
+            height: 100%;
+            box-sizing: border-box;
         }
 
         .project-card:hover {
@@ -111,29 +119,6 @@
             font-weight: 600;
         }
 
-        .image-container {
-            position: relative;
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            background: #000;
-        }
-
-        .image-container .blocker {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 10;
-            background: rgba(0,0,0,0);
-        }
-
-        .project-img {
-            width: 100%;
-            height: auto;
-            display: block;
-            opacity: 0.85;
-        }
-
         footer {
             text-align: center;
             margin-top: 80px;
@@ -157,49 +142,31 @@
             <p>Software Engineering Student • Academic & Development Portfolio</p>
         </header>
 
-        <h2>📚 High School Showcases</h2>
+        <h2>High School Showcases</h2>
         <div class="project-grid">
             
-            <div class="project-card">
-                <div>
-                    <h3>Advanced Biology Research</h3>
-                    <div class="tags">
-                        <span class="tag">STEM</span>
-                        <span class="tag">Analysis</span>
-                        <span class="tag">High School</span>
+            <a href="viti-pare/" class="project-link">
+                <div class="project-card">
+                    <div>
+                        <h3>Projektet e Vitit të Parë</h3>
+                        <div class="tags">
+                            <span class="tag">Folder</span>
+                            <span class="tag">Shkencë & TIK</span>
+                        </div>
+                        <p>Kliko për të hapur folderin ueb që përmban projektet e integruara të TIK-ut, Biologjisë dhe Fizikës.</p>
                     </div>
-                    <p>Comprehensive study detailing cellular mechanisms. Visual document summary map previews are loaded here securely.</p>
                 </div>
-                <div class="image-container">
-                    <div class="blocker"></div>
-                    <img src="https://unsplash.com" alt="Secure Preview" class="project-img">
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div>
-                    <h3>History Honors Thesis</h3>
-                    <div class="tags">
-                        <span class="tag">Humanities</span>
-                        <span class="tag">Essay</span>
-                    </div>
-                    <p>Analytical exploration of global economic frameworks. Displayed entirely as flat, protected imagery.</p>
-                </div>
-                <div class="image-container">
-                    <div class="blocker"></div>
-                    <img src="https://unsplash.com" alt="Secure Preview" class="project-img">
-                </div>
-            </div>
+            </a>
 
         </div>
 
-        <h2>💻 Software Engineering Engines</h2>
+        <h2>Software Engineering Engines</h2>
         <div class="project-grid">
             <div class="project-card" style="opacity: 0.6; border-style: dashed;">
                 <div>
                     <h3>University Core Applications</h3>
                     <div class="tags"><span class="tag">Upcoming</span></div>
-                    <p>Source files, interactive algorithms, and system designs will deploy here automatically as coursework launches.</p>
+                    <p>Projektet e inxhinierisë softuerike do të ndërtohen këtu automatikisht.</p>
                 </div>
             </div>
         </div>
@@ -212,7 +179,6 @@
 
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
-        
         document.addEventListener('keydown', function(e) {
             if (e.key === "PrintScreen" || (e.ctrlKey && e.shiftKey && e.key === "I") || (e.ctrlKey && e.key === "u")) {
                 e.preventDefault();
