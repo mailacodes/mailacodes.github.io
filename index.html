@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maila Shaqelli | Software Engineering Portfolio</title>
+    <title>Maila Shaqelli | Full-Stack Software Engineer</title>
 
-    <meta name="description" content="Maila Shaqelli - Software Engineering Student at Epoka University. Interactive portfolio and project archives.">
-    <meta name="keywords" content="Maila Shaqelli, mailacodes, Software Engineering, Epoka University">
+    <meta name="description" content="Maila Shaqelli - Full-Stack Software Engineering Student at Epoka University. Web architecture, systems, and mathematics.">
+    <meta name="keywords" content="Maila Shaqelli, mailacodes, Full Stack Developer, Software Engineering, Epoka University">
     <meta name="author" content="Maila Shaqelli">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg: #090d14;
-            --card-bg: rgba(17, 23, 34, 0.75);
-            --card-hover: rgba(25, 33, 47, 0.9);
-            --text-main: #f0f6fc;
-            --text-muted: #8b949e;
-            --accent: #58a6ff;
-            --pink-accent: #f778ba;
-            --pink-glow: rgba(247, 120, 186, 0.12);
-            --border: #30363d;
+            --bg: #0b0914;
+            --card-bg: rgba(20, 16, 36, 0.6);
+            --card-hover: rgba(28, 22, 50, 0.85);
+            --text-main: #f3f0ff;
+            --text-muted: #9a94b8;
+            --accent-cyan: #7000ff;
+            --accent-pink: #ff5eb1;
+            --accent-purple: #a855f7;
+            --rose-glow: rgba(255, 94, 177, 0.15);
+            --border: rgba(168, 85, 247, 0.2);
+            --border-hover: rgba(255, 94, 177, 0.4);
         }
 
         * {
@@ -33,43 +35,46 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--bg);
             color: var(--text-main);
             line-height: 1.6;
             min-height: 100vh;
-            padding: 70px 20px;
+            padding: 80px 20px;
             display: flex;
             justify-content: center;
             background-image: 
-                radial-gradient(circle at 10% 10%, rgba(88, 166, 255, 0.06) 0%, transparent 45%),
-                radial-gradient(circle at 90% 90%, rgba(247, 120, 186, 0.05) 0%, transparent 45%);
+                radial-gradient(circle at 15% 15%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 85% 85%, rgba(255, 94, 177, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(112, 0, 255, 0.05) 0%, transparent 60%);
             background-attachment: fixed;
         }
 
         .container {
-            max-width: 960px;
+            max-width: 980px;
             width: 100%;
         }
 
         header {
-            margin-bottom: 50px;
-            padding-bottom: 35px;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
             border-bottom: 1px solid var(--border);
+            position: relative;
         }
 
         .profile-badge {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(88, 166, 255, 0.06);
-            border: 1px solid rgba(88, 166, 255, 0.2);
-            color: var(--accent);
+            background: rgba(255, 94, 177, 0.08);
+            border: 1px solid rgba(255, 94, 177, 0.25);
+            color: var(--accent-pink);
             font-family: 'Fira Code', monospace;
             font-size: 0.82rem;
-            padding: 6px 16px;
-            border-radius: 20px;
-            margin-bottom: 20px;
+            padding: 6px 18px;
+            border-radius: 30px;
+            margin-bottom: 24px;
+            letter-spacing: 0.02em;
         }
 
         .status-dot {
@@ -81,68 +86,72 @@
         }
 
         h1 {
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             font-weight: 700;
             letter-spacing: -0.03em;
-            color: #ffffff;
-            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ffffff 30%, var(--accent-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 18px;
         }
 
         .bio {
             color: var(--text-muted);
-            font-size: 1.15rem;
-            max-width: 720px;
+            font-size: 1.2rem;
+            max-width: 740px;
             font-weight: 300;
             line-height: 1.7;
         }
 
         .bio span {
-            color: var(--pink-accent);
+            color: var(--accent-pink);
             font-weight: 500;
         }
 
         .system-bar {
             display: flex;
-            gap: 20px;
-            margin-top: 25px;
-            padding: 12px 18px;
-            background: rgba(255, 255, 255, 0.02);
+            gap: 24px;
+            margin-top: 30px;
+            padding: 14px 22px;
+            background: rgba(20, 16, 36, 0.5);
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 12px;
             font-family: 'Fira Code', monospace;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             color: var(--text-muted);
             flex-wrap: wrap;
+            backdrop-filter: blur(10px);
         }
 
         .system-item span {
-            color: var(--accent);
+            color: var(--accent-purple);
+            font-weight: 500;
         }
 
         section {
-            margin-bottom: 60px;
+            margin-bottom: 65px;
         }
 
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
 
         .section-title {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 600;
             color: #ffffff;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             font-family: 'Fira Code', monospace;
         }
 
         .section-title::before {
             content: "//";
-            color: var(--pink-accent);
+            color: var(--accent-pink);
         }
 
         .section-subtitle {
@@ -153,46 +162,64 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 22px;
         }
 
         .project-card {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            backdrop-filter: blur(12px);
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 16px;
+            padding: 26px;
+            backdrop-filter: blur(16px);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             text-decoration: none;
             color: inherit;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .project-card:hover {
             background: var(--card-hover);
-            border-color: var(--pink-accent);
-            box-shadow: 0 12px 35px var(--pink-glow);
-            transform: translateY(-4px);
+            border-color: var(--border-hover);
+            box-shadow: 0 16px 40px var(--rose-glow);
+            transform: translateY(-5px);
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
         }
 
         .card-top {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .card-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .card-id {
             font-family: 'Fira Code', monospace;
-            font-size: 0.8rem;
-            color: var(--accent);
+            font-size: 0.78rem;
+            color: var(--accent-purple);
             font-weight: 500;
         }
 
@@ -201,32 +228,32 @@
             font-size: 0.7rem;
             color: #3fb950;
             background: rgba(63, 185, 80, 0.1);
-            border: 1px solid rgba(63, 185, 80, 0.2);
-            padding: 2px 8px;
-            border-radius: 4px;
+            border: 1px solid rgba(63, 185, 80, 0.25);
+            padding: 2px 9px;
+            border-radius: 20px;
         }
 
         .project-card h3 {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: #ffffff;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-family: 'Fira Code', monospace;
         }
 
         .project-card p {
             color: var(--text-muted);
-            font-size: 0.92rem;
-            line-height: 1.55;
+            font-size: 0.93rem;
+            line-height: 1.6;
         }
 
         .card-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 10px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            margin-top: 12px;
         }
 
         .tech-stack {
@@ -237,15 +264,15 @@
         .tech-pill {
             font-family: 'Fira Code', monospace;
             font-size: 0.72rem;
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border);
-            padding: 2px 8px;
-            border-radius: 4px;
+            padding: 3px 9px;
+            border-radius: 6px;
             color: var(--text-muted);
         }
 
         .arrow-link {
-            color: var(--pink-accent);
+            color: var(--accent-pink);
             font-family: 'Fira Code', monospace;
             font-size: 0.9rem;
             font-weight: 500;
@@ -253,65 +280,67 @@
         }
 
         .project-card:hover .arrow-link {
-            transform: translateX(4px);
+            transform: translateX(5px);
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
         }
 
         .skill-box {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 14px;
+            padding: 24px;
+            backdrop-filter: blur(12px);
         }
 
         .skill-box h4 {
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             color: #ffffff;
             font-family: 'Fira Code', monospace;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .skill-box h4::before {
             content: ">";
-            color: var(--accent);
+            color: var(--accent-pink);
         }
 
         .skill-box p {
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .connect-box {
-            background: rgba(22, 27, 34, 0.4);
+            background: rgba(20, 16, 36, 0.4);
             border: 1px dashed var(--border);
-            border-radius: 12px;
-            padding: 24px;
+            border-radius: 16px;
+            padding: 28px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 20px;
+            backdrop-filter: blur(10px);
         }
 
         .connect-info h3 {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: #ffffff;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             font-family: 'Fira Code', monospace;
         }
 
         .connect-info p {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.92rem;
         }
 
         .social-links {
@@ -321,25 +350,26 @@
 
         .social-btn {
             font-family: 'Fira Code', monospace;
-            font-size: 0.82rem;
+            font-size: 0.85rem;
             color: var(--text-main);
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border);
-            padding: 8px 16px;
-            border-radius: 6px;
+            padding: 10px 20px;
+            border-radius: 8px;
             text-decoration: none;
-            transition: all 0.2s ease;
+            transition: all 0.25s ease;
         }
 
         .social-btn:hover {
-            border-color: var(--accent);
+            border-color: var(--accent-pink);
             color: #ffffff;
-            background: rgba(88, 166, 255, 0.08);
+            background: rgba(255, 94, 177, 0.1);
+            box-shadow: 0 4px 20px rgba(255, 94, 177, 0.2);
         }
 
         footer {
-            margin-top: 80px;
-            padding-top: 30px;
+            margin-top: 90px;
+            padding-top: 35px;
             border-top: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
@@ -350,7 +380,7 @@
         }
 
         footer a {
-            color: var(--accent);
+            color: var(--accent-purple);
             text-decoration: none;
         }
 
@@ -359,10 +389,10 @@
         }
 
         @media (max-width: 600px) {
-            h1 { font-size: 2.3rem; }
-            .section-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+            h1 { font-size: 2.4rem; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 8px; }
             .connect-box { flex-direction: column; align-items: flex-start; }
-            footer { flex-direction: column; gap: 12px; text-align: center; }
+            footer { flex-direction: column; gap: 14px; text-align: center; }
         }
     </style>
 </head>
@@ -375,11 +405,11 @@
                 <span>mailacodes.github.io</span>
             </div>
             <h1>Maila Shaqelli</h1>
-            <p class="bio">Software Engineering student at <span>Epoka University</span>. Focused on web architecture, clean frontend interfaces, and applied mathematics.</p>
+            <p class="bio">Full-Stack Software Engineering student at <span>Epoka University</span>. Building end-to-end web architectures, scalable backend services, and clean digital experiences.</p>
             
             <div class="system-bar">
                 <div class="system-item">DEGREE: <span>B.Sc. Software Engineering</span></div>
-                <div class="system-item">FOCUS: <span>Frontend & Systems</span></div>
+                <div class="system-item">TRACK: <span>Full-Stack Development</span></div>
                 <div class="system-item">STATUS: <span>Active</span></div>
             </div>
         </header>
@@ -387,7 +417,7 @@
         <main>
             <section>
                 <div class="section-header">
-                    <h2 class="section-title">Academic & Project Archives</h2>
+                    <h2 class="section-title">Academic & Engineering Archives</h2>
                     <span class="section-subtitle">viti-pare / compiled-modules</span>
                 </div>
                 
@@ -459,18 +489,18 @@
 
                 <div class="skills-grid">
                     <div class="skill-box">
-                        <h4>Frontend Development</h4>
-                        <p>Building responsive, accessible web interfaces using semantic HTML5, modern CSS layouts, and UI optimization.</p>
+                        <h4>Frontend Engineering</h4>
+                        <p>Crafting responsive, accessible web interfaces with clean layout systems, typography, and interactive modern designs.</p>
                     </div>
 
                     <div class="skill-box">
-                        <h4>Applied Mathematics</h4>
-                        <p>Calculus, 3D volume optimization, and mathematical analysis applied to algorithmic problem-solving.</p>
+                        <h4>Backend & Systems</h4>
+                        <p>Exploring server-side development, database architectures, RESTful APIs, and core application logic.</p>
                     </div>
 
                     <div class="skill-box">
-                        <h4>Workflow & Tooling</h4>
-                        <p>Version control with Git, repository management, GitHub Pages deployment, and source code protection strategies.</p>
+                        <h4>Applied Mathematics & Tools</h4>
+                        <p>Calculus, 3D volume optimization, Git version control, and cloud hosting via GitHub Pages.</p>
                     </div>
                 </div>
             </section>
@@ -483,7 +513,7 @@
                     </div>
                     <div class="social-links">
                         <a href="https://github.com/mailacodes" target="_blank" class="social-btn">GitHub Profile</a>
-                        <a href="https://www.linkedin.com" target="_blank" class="social-btn">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/maila-shaqelli-4197a73a4" target="_blank" class="social-btn">LinkedIn</a>
                     </div>
                 </div>
             </section>
