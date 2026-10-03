@@ -27,7 +27,7 @@
         }
 
         .container {
-            max-width: 1040px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -41,62 +41,46 @@
 
         h1 {
             color: #fff;
-            font-size: 2rem;
-            margin: 0 0 20px 0;
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
         }
 
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+        .folder-desc {
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
         }
 
-        .project-card {
+        .project-section {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            padding: 30px;
+            margin-bottom: 35px;
         }
 
-        .project-card h3 {
+        .project-section h2 {
             color: #fff;
-            margin: 0 0 12px 0;
+            margin-top: 0;
+            font-size: 1.6rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
         }
 
-        .project-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin: 0 0 20px 0;
+        .project-section h3 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 25px;
         }
 
-        .image-container {
-            position: relative;
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            background: #21262d;
-            min-height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        p, ul {
+            color: var(--text-main);
+            font-size: 1rem;
         }
 
-        .image-container .blocker {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 10;
-            background: rgba(0,0,0,0);
-        }
-
-        .placeholder-text {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            text-align: center;
-            padding: 20px;
+        li {
+            margin-bottom: 10px;
         }
 
         footer {
@@ -104,6 +88,8 @@
             margin-top: 60px;
             color: var(--text-muted);
             font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
         }
 
         @media print {
@@ -114,48 +100,70 @@
 <body>
 
     <div class="container">
-        <a href="../" class="back-link">← Kthehu te kreu</a>
-        <h1>Folderi: Projektet e Vitit të Parë</h1>
+        <a href="../" class="back-link">← Kthehu te faqja kryesore</a>
+        <h1>📂 Folderi: Projektet e Vitit të Parë</h1>
+        <p class="folder-desc">Këtu ndodhen të treja punimet e mia kërkimore të detajuara pa asnjë ndryshim të tekstit.</p>
 
-        <div class="project-grid">
+        <!-- 1. TIK / ROBOTIKA -->
+        <div class="project-section">
+            <h2>TIK: Robotika dhe Inteligjenca Artificiale</h2>
+            <p>Robotika dhe inteligjenca artificiale (IA) janë dy fusha që po përparojnë me shpejtësi dhe kanë një ndikim të madh në shumë aspekte të jetës sonë. Këto teknologji kanë potencialin të ndryshojnë rrënjësisht mënyrën se si punojmë, jetojmë dhe ndërveprojmë me botën rreth nesh.</p>
             
-            <div class="project-card">
-                <div>
-                    <h3>1. Robotika dhe Inteligjenca Artificiale</h3>
-                    <p>Studim mbi automatizimin industrial, aplikimet në shëndetësi dhe integrimin e sistemeve IA.</p>
-                </div>
-                <div class="image-container">
-                    <div class="blocker"></div>
-                    <div class="placeholder-text">Imazhi: tik.png pritet të ngarkohet</div>
-                </div>
-            </div>
+            <h3>1. Robotika</h3>
+            <p>Robotika është shkenca dhe teknologjia e krijimit, funksionimit dhe përdorimit të robotëve. Këtu janë disa nga fushat kryesore dhe aplikimet në robotikë:</p>
+            <ul>
+                <li><strong>Robotët Industrialë (Automatizimi i Prodhimit):</strong> Robotët përdoren gjerësisht në prodhimin industrial për të kryer detyra të përsëritura dhe të rrezikshme, duke përmirësuar efikasitetin dhe sigurinë në fabrika. Po ashtu kryejnë detyra precize si montimi dhe salduarja.</li>
+                <li><strong>Robotët në Shërbime (Kujdesi Shëndetësor):</strong> Robotët ndihmojnë në operacione kirurgjikale, rehabilitim dhe kujdes për të moshuarit. Ata mund të ofrojnë asistencë mjekësore dhe mbikëqyrje në shtëpi.</li>
+                <li><strong>Robotët për Kërkim dhe Shpëtim:</strong> Përdoren për të kërkuar dhe shpëtuar njerëz në situata emergjente, si pas tërmeteve ose përmbytjeve.</li>
+                <li><strong>Robotët Humanoidë (Asistentë Personalë):</strong> Mund të ofrojnë shërbime asistimi në shtëpi dhe zyra, duke ndihmuar me detyra të ndryshme të përditshme.</li>
+            </ul>
 
-            <div class="project-card">
-                <div>
-                    <h3>2. Biologjia: Shkenca e Jetës</h3>
-                    <p>Hulumtim mbi strukturën e ADN-së, gjenetikën molekulare dhe teorinë e evolucionit.</p>
-                </div>
-                <div class="image-container">
-                    <div class="blocker"></div>
-                    <div class="placeholder-text">Imazhi: biologjia.png pritet të ngarkohet</div>
-                </div>
-            </div>
+            <h3>E ardhmja e Robotikës dhe IA</h3>
+            <p>Integrimi më i madh i IA dhe robotikës në përditshmëri pritet të bëhet më i zakonshëm. Robotët do të bëhen më të pavarur, më inteligjentë dhe të aftë të marrin vendime komplekse duke përdorur gjuhën natyrore dhe shenjat e trupit.</p>
+        </div>
 
-            <div class="project-card">
-                <div>
-                    <h3>3. Mrekullitë e Fizikës</h3>
-                    <p>Eksplorimi i ligjeve të gravitetit të Njutonit dhe teorisë së relativitetit (E=mc²).</p>
-                </div>
-                <div class="image-container">
-                    <div class="blocker"></div>
-                    <div class="placeholder-text">Imazhi: fizika.png pritet të ngarkohet</div>
-                </div>
-            </div>
+        <!-- 2. BIOLOGJIA -->
+        <div class="project-section">
+            <h2>Biologjia: Shkenca e Jetës</h2>
+            
+            <h3>1. Rëndësia e Biologjisë</h3>
+            <p>Biologjia ka një ndikim të madh në jetën e përditshme dhe shëndetin e njerëzve. Përparimet në biologji kanë çuar në zhvillimin e ilaçeve, terapive gjenetike, teknikave të reja të diagnostikimit dhe trajtimeve mjekësore. Gjithashtu luan rol kyç në bujqësi dhe menaxhimin e ekosistemeve.</p>
+            
+            <h3>2. Fakte Interesante për lëndën e Biologjisë</h3>
+            <ul>
+                <li><strong>ADN-ja e Njeriut:</strong> Nëse do të shtriheshin të gjitha molekulat e ADN-së në trupin e një njeriu të vetëm, ato do të shkonin rreth 10 miliardë milje (nga Toka deri te Plutoni dhe mbrapa).</li>
+                <li><strong>Bakteret dhe Trupi:</strong> Trupi i njeriut përmban rreth 37.2 trilion qeliza, por ka rreth 39 trilion baktere.</li>
+                <li><strong>Ritmi i Zemrës:</strong> Zemra e një balene blu është aq e madhe sa një fëmijë mund të notojë nëpër arteriet e saj, dhe rrahja dëgjohet deri në 3 kilometra larg.</li>
+                <li><strong>Fotosinteza:</strong> Pemët dhe bimët prodhojnë oksigjen si një nënprodukt të krijimit të ushqimit përmes energjisë së diellit.</li>
+            </ul>
 
+            <h3>3. Tema të Njohura dhe të Vlerësuara</h3>
+            <p><strong>Teoria e Evolucionit nga Seleksionimi Natyror:</strong> Charles Darwin propozoi se speciet ndryshojnë me kohën ku individët me karakteristika më të mira mbijetojnë.</p>
+            <p><strong>Gjenetika dhe ADN-ja:</strong> James Watson dhe Francis Crick zbuluan strukturën e dyfishtë spirale të ADN-së.</p>
+            <p><strong>Biologjia Molekulare (Klonimi):</strong> Klonimi i deles Dolly në vitin 1996 tregoi se qelizat e rritura mund të reprogramohen.</p>
+        </div>
+
+        <!-- 3. FIZIKA -->
+        <div class="project-section">
+            <h2>Mrekullitë e Fizikës: Eksplorimi i botës rreth nesh</h2>
+            
+            <h3>1. Ligji i Gravitetit Universal</h3>
+            <p>I botuar nga Sir Isaac Newton në vitin 1687 në librin "Principia". Ligji i tij thotë se një objekt tërheq një objekt tjetër në përpjesëtim të drejtë me masën e tyre të kombinuar dhe në lidhje të kundërt me katrorin e distancës ndërmjet tyre.</p>
+            
+            <h3>2. Ruajtja e Masës dhe Energjisë</h3>
+            <p>Albert Ajnshtajni prezantoi ekuacionin E = mc² në vitin 1905 përmes teorisë së relativitetit special, bazuar në dy postulate:</p>
+            <ul>
+                <li><strong>Parimi i Relativitetit:</strong> Ligjet e fizikës janë të njëjta për të gjitha kornizat e referencës inerciale.</li>
+                <li><strong>Parimi i qëndrueshmërisë së shpejtësisë së dritës:</strong> Shpejtësia e dritës në vakum është gjithmonë konstante dhe nuk varet nga lëvizja e trupit që e lëshon.</li>
+            </ul>
+
+            <h3>3. Ligjet Elektrostatike</h3>
+            <p><strong>Ligji i Kulombit:</strong> Forca midis dy ngarkesave pika është drejtpërdrejt proporcionale me madhësinë e secilës ngarkesë dhe në përpjesëtim të zhdrejtë met katrorin e distancës së tyre. Ngarkesat e njëjta zmbrapsen, të kundërtat tërhiqen.</p>
+            <p><strong>Ligji i Gausit:</strong> Rrjedha neto e një fushe elektrike nëpër një sipërfaqe të mbyllur është proporcionale me ngarkesën elektrike të mbyllur brenda saj.</p>
         </div>
 
         <footer>
-            <p>© 2026 Maila. Çasja e siguruar.</p>
+            <p>© 2026 Maila. Çasja dhe përmbajtja e siguruar plotësisht.</p>
         </footer>
     </div>
 
@@ -169,3 +177,4 @@
     </script>
 </body>
 </html>
+
